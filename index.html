@@ -1,155 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoja de Vida | María José Martínez</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="cv.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hoja de Vida - María José Martínez</title>
+  <style>
+    :root{
+      --primary: #366759;
+      --muted: #6b6b6b;
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --radius: 10px;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    *{box-sizing: border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      padding:30px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.45;
+    }
+
+    .container{
+      width:100%;
+      max-width:900px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(0,0,0,0.08);
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      padding:28px;
+      background:linear-gradient(90deg, rgba(54,103,89,0.06), rgba(54,103,89,0.02));
+    }
+
+    .profile-pic{
+      width:110px;
+      height:110px;
+      border-radius:12px;
+      object-fit:cover;
+      border:4px solid rgba(54,103,89,0.12);
+      background:#eee;
+    }
+
+    .head-info{
+      flex:1;
+      min-width:0;
+    }
+    .name{
+      margin:0 0 6px 0;
+      font-size:22px;
+      font-weight:700;
+      color:var(--primary);
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    main{
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+    }
+
+    h2.section-title{
+      margin:0 0 12px 0;
+      font-size:13px;
+      color:var(--card);
+      display:inline-block;
+      padding:8px 12px;
+      background:var(--primary);
+      border-radius:6px;
+      font-weight:700;
+    }
+
+    .section{
+      margin-bottom:22px;
+      padding:18px;
+      background:linear-gradient(0deg, rgba(0,0,0,0.02), rgba(0,0,0,0.00));
+      border-radius:8px;
+    }
+
+    .datos-list{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:8px 24px;
+    }
+    .datos-item strong{ width:140px; color:var(--muted); font-weight:600; display:inline-block;}
+    .datos-item span{ color:#111; }
+
+    .perfil p{ margin:0 0 10px 0; text-align:justify; }
+
+    .skill{ margin-bottom:10px; }
+    .skill .label{
+      display:flex;
+      justify-content:space-between;
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .bar{ width:100%; height:10px; background:#e6e6e6; border-radius:999px; overflow:hidden; }
+    .bar > i{ display:block; height:100%; background:var(--primary); border-radius:999px; }
+
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      margin:6px 6px 6px 0;
+      border-radius:999px;
+      background:rgba(54,103,89,0.08);
+      color:var(--primary);
+      font-weight:600;
+      font-size:13px;
+    }
+
+    footer{
+      padding:18px 28px;
+      font-size:13px;
+      color:var(--muted);
+      border-top:1px solid rgba(0,0,0,0.04);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:880px){
+      main{ grid-template-columns: 1fr; }
+      .datos-list{ grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container header-container">
-      <a href="#" class="logo">María<span>José</span></a>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#perfil">Perfil</a></li>
-          <li><a href="#educacion">Educación</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
+  <div class="container">
+    <header>
+      <!-- Foto -->
       <img src="foto.jpeg" alt="Foto de perfil" class="profile-pic">
-      <h1>María José Martínez</h1>
-      <p>Estudiante de Ingeniería de Software | Desarrolladora Web en formación</p>
-      <a href="#perfil" class="btn">Conoce más</a>
-    </div>
-  </section>
-
-  <!-- Perfil -->
-  <section id="perfil">
-    <div class="container">
-      <h2 class="section-title">Perfil Profesional</h2>
-      <p>
-        Soy estudiante de Ingeniería de Software con interés en el desarrollo web, bases de datos y diseño de interfaces modernas. 
-        Me caracterizo por mi disciplina, capacidad de aprendizaje autónomo y motivación para adquirir nuevas habilidades tecnológicas. 
-        Aspiro a aplicar mis conocimientos en proyectos que aporten soluciones innovadoras.
-      </p>
-    </div>
-  </section>
-
-  <!-- Educación -->
-  <section id="educacion">
-    <div class="container">
-      <h2 class="section-title">Educación</h2>
-      <table class="modality-table">
-        <thead>
-          <tr>
-            <th>Institución</th>
-            <th>Título</th>
-            <th>Años</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Universidad Tecnológica de Colombia</td>
-            <td>Ingeniería de Software</td>
-            <td>2023 - Actualidad</td>
-          </tr>
-          <tr>
-            <td>Colegio Nacional José Celestino Mutis</td>
-            <td>Bachiller Académico</td>
-            <td>2017 - 2022</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Experiencia -->
-  <section id="experiencia">
-    <div class="container">
-      <h2 class="section-title">Experiencia</h2>
-      <div class="tools-container">
-        <div class="tool-card">
-          <h3>Proyecto Académico - Sistema de Gestión de Citas</h3>
-          <p><em>Universidad Tecnológica de Colombia | 2024</em></p>
-          <p>Diseño y desarrollo de un sistema web para agendamiento de citas médicas, con base de datos en MySQL y frontend en HTML, CSS y JS.</p>
-        </div>
-        <div class="tool-card">
-          <h3>Desarrolladora Freelance</h3>
-          <p><em>2022 - 2024</em></p>
-          <p>Creación de páginas web para negocios locales con diseño responsivo y sistemas CRUD básicos con PHP y MySQL.</p>
-        </div>
+      <div class="head-info">
+        <h1 class="name">María José Martínez</h1>
+        <p class="subtitle">Estudiante de Ingeniería de Software • Desarrollo web & Gestión de bases de datos</p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Habilidades -->
-  <section id="habilidades">
-    <div class="container">
-      <h2 class="section-title">Habilidades</h2>
-      <div class="indicators-container">
-        <div class="indicator-card">
-          <h3 class="indicator-title">HTML / CSS / JavaScript</h3>
-          <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-        </div>
-        <div class="indicator-card">
-          <h3 class="indicator-title">Python / Java</h3>
-          <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
-        </div>
-        <div class="indicator-card">
-          <h3 class="indicator-title">Bases de Datos (MySQL / PostgreSQL)</h3>
-          <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
-        </div>
-        <div class="indicator-card">
-          <h3 class="indicator-title">Metodologías Ágiles</h3>
-          <div class="progress-bar"><div class="progress" style="width: 55%"></div></div>
-        </div>
+    <main>
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="left-col">
+        <section class="section">
+          <h2 class="section-title">DATOS PERSONALES</h2>
+          <div class="datos-list" style="margin-top:12px;">
+            <div class="datos-item"><strong>Fecha de nacimiento:</strong><span>07 de mayo de 1992</span></div>
+            <div class="datos-item"><strong>Nacionalidad:</strong><span>Colombiana</span></div>
+
+            <div class="datos-item"><strong>Estado civil:</strong><span>Soltera</span></div>
+            <div class="datos-item"><strong>Ciudad:</strong><span>Bogotá, Colombia</span></div>
+
+            <div class="datos-item"><strong>Teléfono:</strong><span>+57 310 111 1111</span></div>
+            <div class="datos-item"><strong>E-mail:</strong><span>mjmartinez@email.com</span></div>
+          </div>
+        </section>
+
+        <section class="section perfil">
+          <h2 class="section-title">PERFIL PROFESIONAL</h2>
+          <p>
+            Soy estudiante de Ingeniería de Software con enfoque en el desarrollo web y gestión de bases de datos. Me destaco por mi
+            capacidad de aprendizaje autónomo, adaptabilidad y trabajo en equipo. Tengo experiencia desarrollando aplicaciones web y
+            realizando integraciones con bases de datos relacionales; además, cuento con habilidades en UX/UI y diseño de interfaces.
+          </p>
+          <p>
+            Apasionada por la innovación tecnológica, busco crear soluciones digitales centradas en el usuario que generen impacto positivo.
+            Complemento mi formación con cursos online y proyectos prácticos, orientados a mejorar la usabilidad y el rendimiento de sistemas.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">EXPERIENCIA</h2>
+          <ul style="margin-top:12px; list-style:none; padding:0;">
+            <li style="margin-bottom:14px;">
+              <strong>Freelance — Desarrollo Web</strong>
+              <div style="color:var(--muted); font-size:13px;">2021 - Presente</div>
+              <div style="margin-top:6px;">Diseñé y desarrollé 5 páginas web para negocios locales, logrando aumentar su presencia digital en un 40%.</div>
+            </li>
+
+            <li>
+              <strong>Proyecto Académico — Sistema de Gestión de Citas</strong>
+              <div style="color:var(--muted); font-size:13px;">2023</div>
+              <div style="margin-top:6px;">Implementé un sistema de gestión de citas que optimizó la asignación de turnos en un 30% y redujo conflictos de horarios.</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">EDUCACIÓN</h2>
+          <ul style="margin-top:12px; list-style:none; padding:0;">
+            <li style="margin-bottom:12px;">
+              <div><strong>Ingeniería de Software — Universidad XXXXX</strong></div>
+              <div style="color:var(--muted); font-size:13px;">Pregrado en curso / 2018 - 2024</div>
+            </li>
+            <li style="margin-bottom:12px;">
+              <div><strong>Bachillerato Académico — Colegio XXXXX</strong></div>
+              <div style="color:var(--muted); font-size:13px;">2011</div>
+            </li>
+            <li>
+              <div><strong>Cursos y certificaciones</strong></div>
+              <div style="color:var(--muted); font-size:14px; margin-top:6px;">
+                - Desarrollo Web (Platzi)<br>
+                - SQL y Bases de Datos (Coursera)<br>
+                - Bootcamp UX/UI (Udemy)
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
-    </div>
-  </section>
 
-  <!-- Contacto -->
-  <section id="contacto">
-    <div class="container contact-container">
-      <div class="contact-info">
-        <h2 class="section-title">Contacto</h2>
-        <p><strong>📍 Dirección:</strong> Montería, Córdoba, Colombia</p>
-        <p><strong>📧 Email:</strong> mariajose.dev@email.com</p>
-        <p><strong>📱 Teléfono:</strong> +57 300 456 7890</p>
-        <p><strong>🔗 LinkedIn:</strong> linkedin.com/in/mariajose</p>
-      </div>
-    </div>
-  </section>
+      <!-- COLUMNA DERECHA -->
+      <aside>
+        <section class="section">
+          <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
+          <div style="margin-top:12px;">
+            <div class="skill">
+              <div class="label"><span>Frontend: HTML5, CSS3, JavaScript</span><span>75%</span></div>
+              <div class="bar"><i style="width:75%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Backend: PHP, Node.js</span><span>50%</span></div>
+              <div class="bar"><i style="width:50%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Bases de datos: MySQL, PostgreSQL</span><span>65%</span></div>
+              <div class="bar"><i style="width:65%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Versionado: Git, GitHub</span><span>60%</span></div>
+              <div class="bar"><i style="width:60%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Diseño UX/UI: Figma, Canva</span><span>55%</span></div>
+              <div class="bar"><i style="width:55%"></i></div>
+            </div>
+          </div>
+        </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 María José Martínez - Todos los derechos reservados</p>
-    </div>
-  </footer>
+        <section class="section">
+          <h2 class="section-title">IDIOMAS</h2>
+          <div style="margin-top:12px;">
+            <span class="pill">Español — Nativo</span>
+            <span class="pill">Inglés — B2 (Cambridge, 2023)</span>
+            <span class="pill">Portugués — Básico</span>
+          </div>
+        </section>
 
-  <a href="#" class="back-to-top" id="backToTop">↑</a>
-  <script>
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) backToTop.classList.add('visible');
-      else backToTop.classList.remove('visible');
-    });
-    backToTop.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+        <section class="section">
+          <h2 class="section-title">INTERESES</h2>
+          <div style="margin-top:12px; color:var(--muted); font-size:14px;">
+            Tecnología y ciencia<br>
+            Inteligencia Artificial<br>
+            Diseño digital<br>
+            Voluntariado y proyectos sociales<br>
+            Viajes y fotografía
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>Hoja de vida — María José Martínez</div>
+      <div>Última actualización: 2025</div>
+    </footer>
+  </div>
 </body>
 </html>
