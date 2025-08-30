@@ -3,108 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoja de Vida - María José</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Hoja de Vida | María José Martínez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cv.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="profile-container">
-      <img src="foto.jpeg" alt="Foto de perfil" class="profile-pic">
-      <h1>María José</h1>
-      <p class="subtitle">Estudiante de Ingeniería de Software | Desarrolladora Web en formación</p>
+    <div class="container header-container">
+      <a href="#" class="logo">María<span>José</span></a>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#educacion">Educación</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#educacion">Educación</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <!-- PERFIL -->
-    <section id="perfil" class="card">
-      <h2>Perfil Profesional</h2>
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <img src="foto.jpeg" alt="Foto de perfil" class="profile-pic">
+      <h1>María José Martínez</h1>
+      <p>Estudiante de Ingeniería de Software | Desarrolladora Web en formación</p>
+      <a href="#perfil" class="btn">Conoce más</a>
+    </div>
+  </section>
+
+  <!-- Perfil -->
+  <section id="perfil">
+    <div class="container">
+      <h2 class="section-title">Perfil Profesional</h2>
       <p>
-        Soy estudiante de Ingeniería de Software con interés en el desarrollo web, bases de datos y diseño de interfaces modernas. Me caracterizo por mi disciplina, capacidad de aprendizaje autónomo y motivación para adquirir nuevas habilidades tecnológicas. Aspiro a aplicar mis conocimientos en proyectos que aporten soluciones innovadoras.
+        Soy estudiante de Ingeniería de Software con interés en el desarrollo web, bases de datos y diseño de interfaces modernas. 
+        Me caracterizo por mi disciplina, capacidad de aprendizaje autónomo y motivación para adquirir nuevas habilidades tecnológicas. 
+        Aspiro a aplicar mis conocimientos en proyectos que aporten soluciones innovadoras.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- EDUCACIÓN -->
-    <section id="educacion" class="card">
-      <h2>Educación</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Ingeniería de Software</h3>
-          <p><em>Universidad Tecnológica de Colombia (2023 - Actualidad)</em></p>
-          <p>En formación en desarrollo de aplicaciones, bases de datos, sistemas digitales y metodologías ágiles.</p>
+  <!-- Educación -->
+  <section id="educacion">
+    <div class="container">
+      <h2 class="section-title">Educación</h2>
+      <table class="modality-table">
+        <thead>
+          <tr>
+            <th>Institución</th>
+            <th>Título</th>
+            <th>Años</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Universidad Tecnológica de Colombia</td>
+            <td>Ingeniería de Software</td>
+            <td>2023 - Actualidad</td>
+          </tr>
+          <tr>
+            <td>Colegio Nacional José Celestino Mutis</td>
+            <td>Bachiller Académico</td>
+            <td>2017 - 2022</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia">
+    <div class="container">
+      <h2 class="section-title">Experiencia</h2>
+      <div class="tools-container">
+        <div class="tool-card">
+          <h3>Proyecto Académico - Sistema de Gestión de Citas</h3>
+          <p><em>Universidad Tecnológica de Colombia | 2024</em></p>
+          <p>Diseño y desarrollo de un sistema web para agendamiento de citas médicas, con base de datos en MySQL y frontend en HTML, CSS y JS.</p>
         </div>
-        <div class="timeline-item">
-          <h3>Bachillerato Académico</h3>
-          <p><em>Colegio Nacional José Celestino Mutis (2017 - 2022)</em></p>
-          <p>Con énfasis en matemáticas y ciencias naturales, participando en semilleros de programación.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Certificaciones</h3>
-          <ul>
-            <li>Curso de Desarrollo Web Full Stack – Platzi (2024)</li>
-            <li>Certificación en Inglés B2 – Cambridge (2023)</li>
-            <li>Curso de Diseño UX/UI – Google Skills (2022)</li>
-          </ul>
+        <div class="tool-card">
+          <h3>Desarrolladora Freelance</h3>
+          <p><em>2022 - 2024</em></p>
+          <p>Creación de páginas web para negocios locales con diseño responsivo y sistemas CRUD básicos con PHP y MySQL.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EXPERIENCIA -->
-    <section id="experiencia" class="card">
-      <h2>Experiencia</h2>
-      <div class="experience-card">
-        <h3>Proyecto Académico - Sistema de Gestión de Citas</h3>
-        <p><em>Universidad Tecnológica de Colombia (2024)</em></p>
-        <ul>
-          <li>Diseño de un sistema web para agendamiento de citas médicas.</li>
-          <li>Modelado de base de datos en MySQL.</li>
-          <li>Desarrollo en HTML, CSS y JavaScript con enfoque en usabilidad.</li>
-        </ul>
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <div class="container">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="indicators-container">
+        <div class="indicator-card">
+          <h3 class="indicator-title">HTML / CSS / JavaScript</h3>
+          <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+        </div>
+        <div class="indicator-card">
+          <h3 class="indicator-title">Python / Java</h3>
+          <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+        </div>
+        <div class="indicator-card">
+          <h3 class="indicator-title">Bases de Datos (MySQL / PostgreSQL)</h3>
+          <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+        </div>
+        <div class="indicator-card">
+          <h3 class="indicator-title">Metodologías Ágiles</h3>
+          <div class="progress-bar"><div class="progress" style="width: 55%"></div></div>
+        </div>
       </div>
-      <div class="experience-card">
-        <h3>Desarrolladora Freelance</h3>
-        <p><em>Agosto 2022 - Abril 2024</em></p>
-        <ul>
-          <li>Creación de páginas web para negocios locales.</li>
-          <li>Desarrollo de interfaces responsivas en HTML y CSS.</li>
-          <li>Implementación básica de sistemas CRUD con PHP y MySQL.</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h2 class="section-title">Contacto</h2>
+        <p><strong>📍 Dirección:</strong> Montería, Córdoba, Colombia</p>
+        <p><strong>📧 Email:</strong> mariajose.dev@email.com</p>
+        <p><strong>📱 Teléfono:</strong> +57 300 456 7890</p>
+        <p><strong>🔗 LinkedIn:</strong> linkedin.com/in/mariajose</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="card">
-      <h2>Habilidades</h2>
-      <ul class="skills">
-        <li>HTML5, CSS3, JavaScript</li>
-        <li>Python y Java básico</li>
-        <li>Gestión de bases de datos SQL</li>
-        <li>Modelado UML</li>
-        <li>Metodologías ágiles (Scrum, Kanban)</li>
-        <li>Comunicación asertiva y trabajo en equipo</li>
-      </ul>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="card">
-      <h2>Contacto</h2>
-      <p><strong>Email:</strong> mariajose.dev@email.com</p>
-      <p><strong>Teléfono:</strong> +57 300 456 7890</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/mariajose</p>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer>
-    <p>© 2025 María José - Todos los derechos reservados</p>
+    <div class="container">
+      <p>&copy; 2025 María José Martínez - Todos los derechos reservados</p>
+    </div>
   </footer>
+
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
